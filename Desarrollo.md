@@ -44,6 +44,7 @@
       - [x] Configurar body-parser para entender json y urlenconded
     - [x] Exportar modulo
     - [x] configurar multer y cloudinary
+    - [x] agregar el controller y ruta home
   - [x] modificar package.json para incluir los scripts de dev
   - [x] Crear folder public
     - [x] Crear folder img
@@ -56,33 +57,41 @@
       - [x] Importar orm
       - [x] Configurar uri
       - [x] Generar conexion con bd
-    - [x] Crear folder model
-      - [x] crear Users.js
-        -[x] Crear name
-        -[x] Crear email
-        -[x] Crear password
-      - [x] crear Inmuebles.js
-        - [x] Crear name
-        - [x] Crear description
-        - [x] Crear price
-        - [x] Crear adress
-        - [x] Crear state
-          - [x] Validar que sea menor o igual a 2
-        - [x] Crear city
-        - [x] Crear zip
-          - [x] Validar que sea menor o igual a 5
-        - [x] Crear country
-          - [x] Validar que sea menor o igual a 2
-        - [x] Crear photo
-        - [x] Crear status para validar si esta disponible o alquilado
-        - [x] Crear user para hacer un "foreing key"
+  - [x] Crear folder model
+    - [x] crear Users.js
+      -[x] Crear name
+      -[x] Crear email
+      -[x] Crear password
+  - [x] crear Inmuebles.js
+    - [x] Crear name
+    - [x] Crear description
+    - [x] Crear price
+    - [x] Crear adress
+    - [x] Crear state
+      - [x] Validar que sea menor o igual a 2
+    - [x] Crear city
+    - [x] Crear zip
+      - [x] Validar que sea menor o igual a 5
+    - [x] Crear country
+      - [x] Validar que sea menor o igual a 2
+    - [x] Crear photo
+    - [x] Crear status para validar si esta disponible o alquilado
+    - [x] Crear user para hacer un "foreing key"
+  - [x] crear folder api
+    - [x] crear folder home
+      - [x] crear routes.js
+      - [x] crear services.js
 - [ ] Definir engine para proyectar front
   ##### Se decide trabajar con Handlebars para el proyecto
     - [x] Configuar engine de Handlebars en server
     - [x] crear folder views
       - [x] crear folder layout
+        - [x] crear archivo main.hbs
+          - [x] configurar bootstrap
+          - [x] configurar los bloques para mostrar las views
       - [x] crear folder inmuebles
       - [x] crear folder partials
+        - [x] crear navigation.hbs
       - [x] crear folder users
       - [x] crear index.hbs
 - [ ] Integrar back y front

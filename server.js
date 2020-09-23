@@ -14,6 +14,7 @@ const { config } = require('./config');
 
 
 // Controllers
+const homeRouter = require('./api/home/routes');
 
 
 // Initialization
@@ -54,7 +55,7 @@ app.use(multer({ storage }).single('photo'));
 
 
 // Routes
-
+app.use('/', homeRouter);
 
 // Static files
 
