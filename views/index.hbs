@@ -1,0 +1,30 @@
+<div class="jumbotron mt-2">
+    <h1 class="display-4">Arrendamientos Pepito</h1>
+    <p class="lead">Bienvenido a tu app Arrendamientos Pepito, aqui podras encontrar los mejores inmuebles no solo de la ciudad sino del mundo</p>
+    <hr class="my-4">
+    <p>Ingresa y vive la mejor experiencia para poder asi nunca olvidar tus paseos o vivencias</p>
+    <a href="/login" class="btn btn-primary">Conecta con el Mundo</a>
+</div>
+<div class="row">
+  {{#each inmuebles}}
+  <div class="col-md-3">
+    <div class="card">
+      <img src="{{photo}}" class="card-img-top" alt="..." style="max-width: 100%;">
+      <div class="card-body">
+        <p><strong>Nombre</strong>: {{name}}</p>
+        <p><strong>Precio</strong>: ${{price}}</p>
+        {{#if status}}
+          <h5><span class="badge badge-secondary badge-success btn-block">Dispobible</span></h5>
+        {{else}}
+          <h5><span class="badge badge-dark btn-lg btn-block">No Disponible</span></h5>
+        {{/if}}
+        <div class="modal-footer">
+          <a href="/inmuebles/{{_id}}">
+            <button type="button" class="btn btn-primary">Ver Mas</button>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+  {{/each}}
+</div>

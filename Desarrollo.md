@@ -94,6 +94,16 @@
         - [x] crear ruta post "/login"
         - [x] crear ruta get "/logout"
       - [x] crear services.js
+    - [x] create folder inmuebles
+      - [x] crear routes.js
+        - [x] crear ruta get '/misinmuebles/inmuebles/create'
+        - [x] crear ruta post '/misinmuebles/new'
+        - [x] crear ruta get '/misinmuebles/inmuebles/edit/:inmuebleId'
+        - [x] crear ruta post '/misinmuebles/inmuebles/edit/:inmuebleId'
+        - [x] crear ruta get '/misinmuebles'
+      - [x] crear services.js
+  - [x] Crear folder utils
+    - [x] crear auth.js
 - [ ] Definir engine para proyectar front
   ##### Se decide trabajar con Handlebars para el proyecto
     - [x] Configuar engine de Handlebars en server

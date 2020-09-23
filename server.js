@@ -16,7 +16,7 @@ const { config } = require('./config');
 // Controllers
 const homeRouter = require('./api/home/routes');
 const userRouter = require('./api/user/routes');
-
+const inmueblesRouter = require('./api/inmuebles/routes');
 
 // Initialization
 const app = express();
@@ -60,7 +60,7 @@ const storage = multer.diskStorage({
         cb(null, uuidv4() + path.extname(file.originalname))
     }
 })
-app.use(multer({ storage }).single('image'));
+app.use(multer({ storage }).single('photo'));
 
 
 // Global Variables
@@ -76,6 +76,7 @@ app.use((req, res, next) => {
 // Routes
 app.use('/', homeRouter);
 app.use('/', userRouter);
+app.use('/', inmueblesRouter);
 
 
 // Static files
