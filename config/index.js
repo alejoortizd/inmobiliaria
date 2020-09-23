@@ -9,6 +9,7 @@ const config = {
   cloud_name: process.env.CLOUD_NAME,
   cloud_api_key: process.env.API_KEY,
   cloud_api_secret: process.env.API_SECRET,
+  secret: process.env.SECRET,
 };
 
 module.exports = { config }

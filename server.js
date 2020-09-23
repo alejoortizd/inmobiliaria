@@ -15,10 +15,13 @@ const { config } = require('./config');
 
 // Controllers
 const homeRouter = require('./api/home/routes');
+const userRouter = require('./api/user/routes');
 
 
 // Initialization
 const app = express();
+app.use(session({ secret: config.secret }))
+require('./config/passport');
 
 
 // Settings
@@ -42,20 +45,38 @@ app.set('view engine', '.hbs');
 app.use(cors());
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended: false}));
+app.use(override('_method'));
+app.use(session({
+    secret: config.secret,
+    resave: true,
+    saveUninitialized: true
+}));
+app.use(passport.initialize());
+app.use(passport.session());
+app.use(flash());
 const storage = multer.diskStorage({
-  destination: path.join(__dirname, 'public/img/upload'),
-  filename: (req, file, cb, filename) => {
-      cb(null, uuidv4() + path.extname(file.originalname))
-  }
+    destination: path.join(__dirname, 'public/img/upload'),
+    filename: (req, file, cb, filename) => {
+        cb(null, uuidv4() + path.extname(file.originalname))
+    }
 })
-app.use(multer({ storage }).single('photo'));
+app.use(multer({ storage }).single('image'));
 
 
 // Global Variables
-
+app.use((req, res, next) => {
+  res.locals.success_msg = req.flash('success_msg');
+  res.locals.error_msg = req.flash('error_msg');
+  res.locals.error = req.flash('error');
+  res.locals.user = req.user || null;
+  res.locals.dev = config.dev;
+  next();
+})
 
 // Routes
 app.use('/', homeRouter);
+app.use('/', userRouter);
+
 
 // Static files
 
