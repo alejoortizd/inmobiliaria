@@ -22,12 +22,25 @@ const app = express();
 
 // Settings
 app.set('port', config.port);
+cloudinary.config({
+  cloud_name: config.cloud_name,
+  api_key: config.cloud_api_key,
+  api_secret: config.cloud_api_secret
+});
 
 
 // Middlewares
 app.use(cors());
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended: false}));
+const storage = multer.diskStorage({
+  destination: path.join(__dirname, 'public/img/upload'),
+  filename: (req, file, cb, filename) => {
+      cb(null, uuidv4() + path.extname(file.originalname))
+  }
+})
+app.use(multer({ storage }).single('photo'));
+
 
 // Global Variables
 

@@ -42,8 +42,12 @@
         - [x] Cambiar puerto para variable de entorno
       - [x] Configurar cors
       - [x] Configurar body-parser para entender json y urlenconded
-      - [x] Exportar modulo
-  - [x] modificar package.json para incluir los scripts de dev.
+    - [x] Exportar modulo
+    - [x] configurar multer y cloudinary
+  - [x] modificar package.json para incluir los scripts de dev
+  - [x] Crear folder public
+    - [x] Crear folder img
+      - [x] Crear folder upload
   - [x] Crear archivo .env y .env.example
     - [x] Agregar la variables de entorno de la bd para iniciar sesion y agregar al .env.example que variables se requieren
   - [ ] Crear carpeta config
