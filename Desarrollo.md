@@ -50,13 +50,13 @@
       - [x] Crear folder upload
   - [x] Crear archivo .env y .env.example
     - [x] Agregar la variables de entorno de la bd para iniciar sesion y agregar al .env.example que variables se requieren
-  - [ ] Crear carpeta config
+  - [ ] Crear folder config
     - [x] Crear archivo index.js
     - [x] Crear archivo db.js
       - [x] Importar orm
       - [x] Configurar uri
       - [x] Generar conexion con bd
-    - [x] Crear carpeta model
+    - [x] Crear folder model
       - [x] crear Users.js
         -[x] Crear name
         -[x] Crear email
@@ -78,4 +78,11 @@
         - [x] Crear user para hacer un "foreing key"
 - [ ] Definir engine para proyectar front
   ##### Se decide trabajar con Handlebars para el proyecto
+    - [x] Configuar engine de Handlebars en server
+    - [x] crear folder views
+      - [x] crear folder layout
+      - [x] crear folder inmuebles
+      - [x] crear folder partials
+      - [x] crear folder users
+      - [x] crear index.hbs
 - [ ] Integrar back y front
