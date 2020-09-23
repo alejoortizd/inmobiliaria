@@ -10,6 +10,8 @@ const multer = require('multer');
 const { v4: uuidv4 } = require('uuid');
 const cloudinary = require('cloudinary');
 const cors = require("cors");
+const { config } = require('./config');
+
 
 // Controllers
 
@@ -19,7 +21,7 @@ const app = express();
 
 
 // Settings
-app.set('port', 3000);
+app.set('port', config.port);
 
 
 // Middlewares
