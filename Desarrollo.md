@@ -36,6 +36,7 @@
       - [x] cloudinary
       - [x] cors
       - [x] mongoose
+      - [x] bcryptjs
     - [x] Crear la instancia app para ejecutar express en ella.
       - [x] Configurar puerto
         - [x] Cambiar puerto para variable de entorno
@@ -51,6 +52,26 @@
       - [x] Importar orm
       - [x] Configurar uri
       - [x] Generar conexion con bd
+    - [x] Crear carpeta model
+      - [x] crear Users.js
+        -[x] Crear name
+        -[x] Crear email
+        -[x] Crear password
+      - [x] crear Inmuebles.js
+        - [x] Crear name
+        - [x] Crear description
+        - [x] Crear price
+        - [x] Crear adress
+        - [x] Crear state
+          - [x] Validar que sea menor o igual a 2
+        - [x] Crear city
+        - [x] Crear zip
+          - [x] Validar que sea menor o igual a 5
+        - [x] Crear country
+          - [x] Validar que sea menor o igual a 2
+        - [x] Crear photo
+        - [x] Crear status para validar si esta disponible o alquilado
+        - [x] Crear user para hacer un "foreing key"
 - [ ] Definir engine para proyectar front
   ##### Se decide trabajar con Handlebars para el proyecto
 - [ ] Integrar back y front
