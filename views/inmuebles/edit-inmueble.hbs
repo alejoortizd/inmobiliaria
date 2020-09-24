@@ -1,0 +1,59 @@
+<div class="col-md-4 mx-auto">
+    <div class="card">
+        <div class="card-header">
+            <h3>Editar Inmueble</h3>
+        </div>
+        <div class="card-body">
+            <form action="/misinmuebles/inmuebles/edit/{{inmueble._id}}?_method=PUT" method="POST">
+                <input type="hidden" name="_method" value="PUT">
+                <div class="form-group">
+                  <span><strong>Nombre</strong></span>
+                  <input type="text" name="name" class="form-control" value="{{inmueble.name}}" required>
+                </div>
+                <div class="form-group">
+                  <span><strong>Descripcion</strong></span>
+                  <input type="text" name="description" class="form-control" value="{{inmueble.description}}" required>
+                </div>
+                <div class="form-group">
+                  <span><strong>Precio</strong></span>
+                  <input type="float" name="price" class="form-control" value="{{inmueble.price}}" required>
+                </div>
+                <div class="form-group">
+                  <span><strong>Direccion</strong></span>
+                  <input type="text" name="adress" class="form-control" value="{{inmueble.adress}}" required>
+                </div>
+                <div class="form-group">
+                  <span><strong>Ciudad</strong></span>
+                  <input type="text" name="city" class="form-control" value="{{inmueble.city}}" required>
+                </div>
+                <div class="form-group">
+                  <span><strong>Estado</strong></span>
+                  <input type="text" name="state" class="form-control" value="{{inmueble.state}}" autofocus required>
+                </div>
+                <div class="form-group">
+                  <span><strong>Zip</strong></span>
+                  <input type="text" name="zip" class="form-control" value="{{inmueble.zip}}" required>
+                </div>
+                <div class="form-group">
+                  <span><strong>Ciudad</strong></span>
+                  <input type="text" name="country" class="form-control" value="{{inmueble.country}}" required>
+                </div>
+                <label for="status"><strong>Status</strong></label>
+                  <select class="custom-select" name="status">
+                    {{#if inmueble.status}}
+                      <option value="true" selected>Dispobible</option>
+                      <option value="false">No Disponible</option>
+                    {{else}}
+                      <option value="false" selected>No Dispobible</option>
+                      <option value="true">Dispobible</option>
+                    {{/if}}
+                  </select>
+                <div class="form-group">
+                  <button class="btn btn-primary btn-block">
+                    Save
+                  </button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>

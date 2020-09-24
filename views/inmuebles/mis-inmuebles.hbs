@@ -1,0 +1,18 @@
+<div class="row">
+  {{#each inmuebles}}
+  <div class="col-md-3">
+    <div class="card">
+      <img src="{{photo}}" class="card-img-top" alt="..." style="max-width: 100%;">
+      <div class="card-body">
+        <p><strong>Nombre</strong>: {{name}}</p>
+        <p><strong>Precio</strong>: ${{price}}</p>
+        <div class="modal-footer">
+          <a href="/misinmuebles/inmuebles/edit/{{_id}}">
+            <button type="button" class="btn btn-primary">Update</button>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+  {{/each}}
+</div>
